@@ -1,0 +1,8 @@
+.industries
+    &__card
+
+@for $i from 1 to 5
+  $val: $i * 10
+
+  .industries__card:nth-child(#{val})
+    transform: translateX(#{$side}px)
