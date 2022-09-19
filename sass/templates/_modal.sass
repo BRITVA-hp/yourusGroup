@@ -9,6 +9,46 @@
     align-items: flex-start
     justify-content: center
     overflow: auto
+    background: rgba(0, 0, 0, 0.6)
+    &-thanks
+        &__text
+            font-style: normal
+            font-weight: 400
+            font-size: 28px
+            line-height: 120%
+            color: #000934
+            margin-bottom: 40px
+            max-width: 396px
+        &__title
+            font-style: normal
+            font-weight: 700
+            font-size: 40px
+            line-height: 120%
+            color: #0044A9
+            margin-bottom: 16px
+        &__dialog
+            background: #F1ECE8
+            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25)
+            padding: 260px 206px
+            position: relative
+            text-align: center
+    &__text
+        font-style: normal
+        font-weight: 400
+        font-size: 28px
+        line-height: 120%
+        color: #000934
+        margin-bottom: 30px
+    &__title
+        font-style: normal
+        font-weight: 700
+        font-size: 40px
+        line-height: 120%
+        color: #0044A9
+        margin-bottom: 10px
+    &__button
+        width: 100%
+        margin-top: 10px
     &__container
         min-height: 100%
         display: flex
@@ -16,3 +56,16 @@
         align-items: center
         width: 100%
         padding: 10px
+    &__dialog
+        position: relative
+        padding: 206px 118px
+        background: #F1ECE8
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25)
+        width: 100%
+        max-width: 810px
+        text-align: center
+    &__close
+        position: absolute
+        top: 40px
+        right: 40px
+        cursor: pointer

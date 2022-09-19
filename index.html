@@ -399,15 +399,17 @@
                 <div class="section__title slider__title">Посмотрите, как мы помогли решить <span>юридические вопросы</span></div>
 
                 <div class="slider__control">
-                    <svg class="slider__control__prev" width="72" height="16" viewBox="0 0 72 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0.292831 7.29289C-0.0976944 7.68342 -0.0976944 8.31658 0.292831 8.70711L6.65679 15.0711C7.04732 15.4616 7.68048 15.4616 8.07101 15.0711C8.46153 14.6805 8.46153 14.0474 8.07101 13.6569L2.41415 8L8.07101 2.34315C8.46153 1.95262 8.46153 1.31946 8.07101 0.928932C7.68048 0.538408 7.04732 0.538408 6.65679 0.928932L0.292831 7.29289ZM71.0071 7L0.999939 7V9L71.0071 9V7Z" fill="#0044A9"/>
-                    </svg>
-                    
-                    <div class="slider__control__dots"></div>
-
-                    <svg class="slider__control__next" width="72" height="16" viewBox="0 0 72 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M70.7142 8.70711C71.1048 8.31658 71.1048 7.68342 70.7142 7.29289L64.3503 0.928932C63.9598 0.538408 63.3266 0.538408 62.9361 0.928932C62.5455 1.31946 62.5455 1.95262 62.9361 2.34315L68.5929 8L62.9361 13.6569C62.5455 14.0474 62.5455 14.6805 62.9361 15.0711C63.3266 15.4616 63.9598 15.4616 64.3503 15.0711L70.7142 8.70711ZM0 9H70.0071V7H0L0 9Z" fill="#0044A9"/>
-                    </svg>                        
+                    <div class="slider__control__box">
+                        <svg class="slider__control__arrow slider__control__arrow--inactive slider__control__arrow--prev" width="72" height="16" viewBox="0 0 72 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0.292831 7.29289C-0.0976944 7.68342 -0.0976944 8.31658 0.292831 8.70711L6.65679 15.0711C7.04732 15.4616 7.68048 15.4616 8.07101 15.0711C8.46153 14.6805 8.46153 14.0474 8.07101 13.6569L2.41415 8L8.07101 2.34315C8.46153 1.95262 8.46153 1.31946 8.07101 0.928932C7.68048 0.538408 7.04732 0.538408 6.65679 0.928932L0.292831 7.29289ZM71.0071 7L0.999939 7V9L71.0071 9V7Z" fill="#0044A9"/>
+                        </svg>
+                        
+                        <div class="slider__control__dots"></div>
+    
+                        <svg class="slider__control__arrow slider__control__arrow--next" width="72" height="16" viewBox="0 0 72 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M70.7142 8.70711C71.1048 8.31658 71.1048 7.68342 70.7142 7.29289L64.3503 0.928932C63.9598 0.538408 63.3266 0.538408 62.9361 0.928932C62.5455 1.31946 62.5455 1.95262 62.9361 2.34315L68.5929 8L62.9361 13.6569C62.5455 14.0474 62.5455 14.6805 62.9361 15.0711C63.3266 15.4616 63.9598 15.4616 64.3503 15.0711L70.7142 8.70711ZM0 9H70.0071V7H0L0 9Z" fill="#0044A9"/>
+                        </svg>
+                    </div>                       
                 </div>
 
                 <div class="slider__window">
@@ -417,7 +419,7 @@
                             <div class="slider__content">
                                 <div class="slider__row">
                                     <picture>
-                                        <source media="(max-width: 575px)" srcset="img/slider/img1M.png">
+                                        <source media="(max-width: 1300px)" srcset="img/slider/img1M.png">
                                         <img src="img/slider/img1.png" alt="" class="slider__img">
                                     </picture>
                                     <div class="slider__box">
@@ -445,7 +447,7 @@
                             <div class="slider__content">
                                 <div class="slider__row">
                                     <picture>
-                                        <source media="(max-width: 575px)" srcset="img/slider/img2M.png">
+                                        <source media="(max-width: 1300px)" srcset="img/slider/img2M.png">
                                         <img src="img/slider/img2.png" alt="" class="slider__img">
                                     </picture>
                                     <div class="slider__box">
@@ -473,7 +475,7 @@
                             <div class="slider__content">
                                 <div class="slider__row">
                                     <picture>
-                                        <source media="(max-width: 575px)" srcset="img/slider/img1M.png">
+                                        <source media="(max-width: 1300px)" srcset="img/slider/img1M.png">
                                         <img src="img/slider/img1.png" alt="" class="slider__img">
                                     </picture>
                                     <div class="slider__box">
@@ -507,6 +509,56 @@
         <!-- /.reverse -->
 
     </main>
+
+    <footer class="footer section">
+        <div class="container footer__container">
+            <div class="row footer__row">
+                <picture>
+                    <source media="(max-width: 991px)" srcset="img/logoM.png">
+                    <img src="img/logo.png" alt="">
+                </picture>
+
+                <nav class="footer__nav">
+                    <a href="#" class="footer__link">Услуги</a>
+                    <a href="#" class="footer__link">Этапы работы</a>
+                    <a href="#" class="footer__link">Преимущества</a>
+                    <a href="#" class="footer__link">Результаты клиентов</a>
+                    <a href="#" class="footer__link">Контакты</a>
+                </nav>
+
+                <button class="button footer__button">Бесплатная консультация</button>
+
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal" style="display: none;" >
+        <div class="modal__container">
+            <div class="modal__dialog">
+                <img src="img/close.png" alt="close" class="modal__close">
+                <h3 class="modal__title">Оформите заявку</h3>
+                <p class="modal__text">Для сотрудничества с нами <br> оставьте свои данные</p>
+                <div class="input-group modal__input-group">
+                    <input placeholder="Ваше имя" type="text" class="input modal__input">
+                </div>
+                <div class="input-group modal__input-group">
+                    <input placeholder="Ваш телефон" type="tel" class="input modal__input">
+                </div>
+                <button class="button modal__button">Отправить</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal-thanks">
+        <div class="modal__container">
+            <div class="modal-thanks__dialog">
+                <img src="img/close.png" alt="close" class="modal__close">
+                <h3 class="modal-thanks__title">Спасибо за ответы!</h3>
+                <p class="modal-thanks__text">Наш юрист свяжется с Вами в ближайшее время</p>
+                <img class="modal-thanks__img" src="img/ok.png" alt="ok">
+            </div>
+        </div>
+    </div>
 
     <script src="js/script.js"></script>
     

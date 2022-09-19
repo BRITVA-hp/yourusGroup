@@ -30,15 +30,14 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     //slider
-    function slider(window, field, cards, margin, dotsWrap, dotClass, dotClassActive, arrowPrev, arrowNext, arrowClass) {
+    function slider(window, field, cards, dotsWrap, dotClass, dotClassActive, arrowPrev, arrowNext, arrowClass, margin) {
         const window_ = document.querySelector(window),
             field_ = document.querySelector(field),
             cards_ = document.querySelectorAll(cards),
             arrowPrev_ = document.querySelector(arrowPrev),
-            arrowNext_ = document.querySelector(arrowNext);
-
-        const cardWidth = document.querySelector(cards).scrollWidth
-        console.log(cardWidth);
+            arrowNext_ = document.querySelector(arrowNext),
+            control = document.querySelector('.slider__control'),
+            sliderBox = document.querySelectorAll('.slider__box');
 
         let startPoint,
             swipeAction,
@@ -48,10 +47,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Устанавливаем фиксированную ширину поля слайдов
 
-        field_.style.width = `${cardWidth * cards_.length + (margin * (cards_.length - 1))}px`;
-        field_.style.marginLeft = 'auto';
-        field_.style.marginRight = 'auto';
-        field_.style.display = 'flex';
+        // field_.style.width = `${cardWidth * cards_.length + (margin * (cards_.length - 1))}px`;
+        // field_.style.marginLeft = 'auto';
+        // field_.style.marginRight = 'auto';
+        // field_.style.display = 'flex';
+
+
+        if (document.documentElement.clientWidth < 992) {
+            control.style.top = sliderBox[sliderCounter].scrollHeight + 126 + 20 + 'px'
+        }
 
         // Слайд следующий
 
@@ -73,9 +77,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 });
             }
-            field_.style.transform = `translateX(-${(cardWidth + margin) * sliderCounter}px)`;
-            if (sliderName_) {
-                slideName ();
+            field_.style.transform = `translateX(-${(cards_[0].scrollWidth + margin) * sliderCounter}px)`;
+            if (document.documentElement.clientWidth < 992) {
+                control.style.top = sliderBox[sliderCounter].scrollHeight + 126 + 20 + 'px'
+            } else {
+                control.style.top = ''
             }
         }
 
@@ -99,9 +105,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 });
             }
-            field_.style.transform = `translateX(-${(cardWidth + margin) * sliderCounter}px)`;
-            if (sliderName_) {
-                slideName ();
+            field_.style.transform = `translateX(-${(cards_[0].scrollWidth + margin) * sliderCounter}px)`;
+            if (document.documentElement.clientWidth < 992) {
+                control.style.top = sliderBox[sliderCounter].scrollHeight + 126 + 20 + 'px'
+            } else {
+                control.style.top = ''
             }
         }
 
@@ -132,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     item_.classList.remove(dotClassActive);
                 });
                 item.classList.add(dotClassActive);
-                field_.style.transform = `translateX(-${(cardWidth + margin) * sliderCounter}px)`;
+                field_.style.transform = `translateX(-${(cards_[0].scrollWidth + margin) * sliderCounter}px)`;
                 });
             });
         }
@@ -155,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         window_.addEventListener('touchmove', (e) => {
             swipeAction = e.changedTouches[0].pageX - startPoint;
-            field_.style.transform = `translateX(${swipeAction + (-(cardWidth + margin) * sliderCounter)}px)`;
+            field_.style.transform = `translateX(${swipeAction + (-(cards_[0].scrollWidth + margin) * sliderCounter)}px)`;
         });
 
         window_.addEventListener('touchend', (e) => {
@@ -169,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     slidePrev();
                 }
             } else {
-                field_.style.transform = `translateX(-${(cardWidth + margin) * sliderCounter}px)`;
+                field_.style.transform = `translateX(-${(cards_[0].scrollWidth + margin) * sliderCounter}px)`;
             }
         });
     }
@@ -177,7 +185,13 @@ document.addEventListener('DOMContentLoaded', () => {
         '.slider__window',
         '.slider__field',
         '.slider__card',
-        0
+        '.slider__control__dots',
+        'slider__control__dot',
+        'slider__control__dot--active',
+        '.slider__control__arrow--prev',
+        '.slider__control__arrow--next',
+        'slider__control__arrow--inactive',
+        20
     );
     // slider(
     //     '.works__window',

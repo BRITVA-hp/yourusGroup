@@ -28,6 +28,15 @@
             margin: auto
 
 @media screen and ( max-width: 1400px )
+    .footer
+        &__nav
+            margin: 50px 0
+            display: flex
+            justify-content: center
+            flex-wrap: wrap
+        &__row
+            flex-direction: column
+
     .power
         margin-bottom: -100px
 
@@ -54,8 +63,31 @@
             font-size: 16px
             margin: 0 15px
 
+@media screen and ( max-width: 1300px )
+    .slider
+        &__control
+            bottom: 100px
+
 @media screen and ( max-width: 1200px )
+    .slider
+        &__img
+            margin-right: 20px
+        &__row
+            justify-content: center
+        &__box
+            padding: 20px 40px
+            max-width: 600px
+            &__title
+                font-size: 20px
+                margin-bottom: 20px
+        &__li
+            margin-bottom: 15px
+            & *
+                font-size: 16px
+
+
     .faq
+        margin-bottom: -150px
         &__box
             max-width: 700px
 
@@ -131,10 +163,99 @@
             width: 240px
 
 @media screen and ( max-width: 991px )
+    .input-group
+        margin-bottom: 20px
+
+    .modal
+        &-thanks
+            &__img
+                width: 80px
+            &__dialog
+                max-width: 300px
+                padding: 142px 50px
+            &__title
+                font-size: 20px
+                margin-bottom: 10px
+            &__text
+                font-size: 18px
+                margin-bottom: 30px
+        &__button
+            font-size: 18px
+        &__input-group
+            margin-bottom: 10px
+        &__input
+            font-size: 14px
+        &__title
+            font-size: 20px
+            margin-bottom: 10px
+        &__text
+            font-size: 18px
+            margin-bottom: 25px
+        &__close
+            top: 20px
+            right: 20px
+            width: 25px
+        &__dialog
+            max-width: 300px
+            padding: 85px 10px
+
+    .footer
+        padding-top: 12px
+        padding-bottom: 80px
+        &__link
+            font-size: 20px
+            display: block
+        &__button
+            width: 100%
+            max-width: 280px
+            font-size: 18px
+            padding: 14px 0
+        &__nav
+            margin: 25px 0
+            flex-direction: column
+            align-items: center
+
+    .reverse
+        display: flex
+        flex-direction: column-reverse
+
+    .slider
+        background: linear-gradient(to bottom, #F1ECE8, #fff)
+        padding-top: 50px
+        padding-bottom: 0
+        width: 100vw
+        &__img
+            margin: 0
+        &__card
+            min-width: calc(100vw - 40px)
+        &__window
+            width: 100%
+        &__title
+            margin-bottom: 30px
+            max-width: 330px
+        &__control
+            transform: none
+            left: 0
+            bottom: auto
+            top: 460px
+            justify-content: center
+            &__box
+                max-width: 767px
+                padding: 0 20px
+        &__box
+            max-width: 672px
+            text-align: center
+            margin-bottom: 70px
+            padding: 30px 10px
+        &__row
+            flex-direction: column-reverse
+            align-items: center
+
     .faq
         background: url(../img/faq/bgMTop.png) no-repeat center top, url(../img/faq/bgMBottom.png) no-repeat center bottom
         padding-top: 80px
         padding-bottom: 100px
+        margin-bottom: 0
         &__item
             &--active
                 .faq__item__title
@@ -149,12 +270,11 @@
         &__title
             margin-bottom: 30px
 
-    .input-group
-        margin-bottom: 20px
-
     .send
         background: #F1ECE8
         padding-top: 40px
+        padding-bottom: 10px
+        margin-bottom: 0
         &__row
             background: none
             justify-content: center
