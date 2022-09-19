@@ -4,6 +4,10 @@
             justify-content: center
 
 @media screen and ( max-width: 1500px )
+    .faq
+        &__box
+            max-width: 900px
+
     .consult
         &__card
             max-width: 515px
@@ -24,6 +28,9 @@
             margin: auto
 
 @media screen and ( max-width: 1400px )
+    .power
+        margin-bottom: -100px
+
     .steps
         padding-top: 40px
         &__img
@@ -48,6 +55,30 @@
             margin: 0 15px
 
 @media screen and ( max-width: 1200px )
+    .faq
+        &__box
+            max-width: 700px
+
+    .send
+        &__row
+            padding-top: 0
+
+    .power
+        padding-bottom: 200px
+        margin-bottom: -50px
+        &__card
+            width: 320px
+            min-height: 240px
+            text-align: center
+            padding: 25px 20px
+            &__title
+                font-size: 18px
+                margin-bottom: 10px
+            &__text
+                font-size: 16px
+        &__row
+            grid-template-columns: repeat(auto-fill, 320px)
+
     .consult
         &__row
             background-size: 500px
@@ -100,6 +131,48 @@
             width: 240px
 
 @media screen and ( max-width: 991px )
+    .faq
+        background: url(../img/faq/bgMTop.png) no-repeat center top, url(../img/faq/bgMBottom.png) no-repeat center bottom
+        padding-top: 80px
+        padding-bottom: 100px
+        &__item
+            &--active
+                .faq__item__title
+                    margin-bottom: 0
+            &__content
+                font-size: 16px
+            &__title
+                font-size: 18px
+                padding: 10px 0
+        &__box
+            max-width: none
+        &__title
+            margin-bottom: 30px
+
+    .input-group
+        margin-bottom: 20px
+
+    .send
+        background: #F1ECE8
+        padding-top: 40px
+        &__row
+            background: none
+            justify-content: center
+
+    .power
+        background: url(../img/power/img2.png) no-repeat center bottom
+        padding-bottom: 345px
+        &__img
+            display: block
+        &__title
+            max-width: 370px
+            margin-bottom: 10px
+        &__subtitle
+            font-size: 18px
+            margin-bottom: 30px
+        &__row
+            grid-gap: 15px
+
     .consult
         padding-top: 70px
         margin-bottom: 60px
@@ -146,9 +219,6 @@
             margin: 10px
         &__title
             margin-bottom: 10px
-
-    .input-group
-        margin-bottom: 20px
 
     .steps
         &__img
@@ -219,6 +289,28 @@
             display: flex
 
 @media screen and ( max-width: 767px )
+    .send
+        &__form
+            padding: 30px 20px
+            max-width: 400px
+        &__button
+            padding: 14px 0
+            margin: 10px 0
+        &__input-group
+            margin-bottom: 10px
+        &__textarea
+            padding: 15px 10px
+            font-size: 14px
+        &__input
+            padding: 15px 10px
+            font-size: 14px
+        &__text
+            font-size: 16px
+            margin-bottom: 25px
+        &__title
+            font-size: 18px
+            margin-bottom: 20px
+
     .industries
         padding: 0
         &__footer
@@ -253,6 +345,18 @@
                 text-align: left !important
 
 @media screen and ( max-width: 575px )
+    .send
+        padding-left: 0
+        padding-right: 0 
+
+    .power
+        padding-left: 0
+        padding-right: 0
+        &__title, &__subtitle
+            padding: 0 20px
+        &__title
+            max-width: 410px
+
     .consult
         padding-left: 0
         padding-right: 0
