@@ -1,5 +1,32 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    //header and call
+    const headerFake = document.querySelector('.header__fake')
+    const header = document.querySelector('.header')
+    const stepsSection = document.querySelector('#steps')
+    const phone = document.querySelector('.phone')
+
+    document.addEventListener('scroll', () => {
+        // console.log(stepsSection.offsetTop);
+        if (document.documentElement.scrollTop > header.scrollHeight) {
+            if (!header.classList.contains('header--fix')) {
+                headerFake.style.height = header.scrollHeight + 'px'
+            }
+            header.classList.add('header--fix');
+        } else {
+            headerFake.style = ''
+            header.classList.remove('header--fix');
+        }
+
+        if (document.documentElement.clientWidth < 992 && document.documentElement.scrollTop > stepsSection.offsetTop) {
+            if (!phone.classList.contains('phone--active')) {
+                phone.classList.add('phone--active')
+            }
+        } else {
+            phone.classList.remove('phone--active')
+        }
+    });
+
     //burger
     const burger = document.querySelector('.header__burger'),
           menu = document.querySelector('.header__menu')
@@ -127,20 +154,25 @@ document.addEventListener('DOMContentLoaded', () => {
             dots_[0].classList.add(dotClassActive);
             dots_.forEach((item, index) => {
                 item.addEventListener('click', () => {
-                sliderCounter = index;
-                arrowNext_.classList.remove(arrowClass);
-                arrowPrev_.classList.remove(arrowClass);
-                if (sliderCounter == 0) {
-                    arrowPrev_.classList.add(arrowClass);
-                }
-                if ((sliderCounter + 1) == cards_.length) {
-                    arrowNext_.classList.add(arrowClass);
-                }
-                dots_.forEach(item_ => {
-                    item_.classList.remove(dotClassActive);
-                });
-                item.classList.add(dotClassActive);
-                field_.style.transform = `translateX(-${(cards_[0].scrollWidth + margin) * sliderCounter}px)`;
+                    sliderCounter = index;
+                    arrowNext_.classList.remove(arrowClass);
+                    arrowPrev_.classList.remove(arrowClass);
+                    if (sliderCounter == 0) {
+                        arrowPrev_.classList.add(arrowClass);
+                    }
+                    if ((sliderCounter + 1) == cards_.length) {
+                        arrowNext_.classList.add(arrowClass);
+                    }
+                    dots_.forEach(item_ => {
+                        item_.classList.remove(dotClassActive);
+                    });
+                    item.classList.add(dotClassActive);
+                    field_.style.transform = `translateX(-${(cards_[0].scrollWidth + margin) * sliderCounter}px)`;
+                    if (document.documentElement.clientWidth < 992) {
+                        control.style.top = sliderBox[sliderCounter].scrollHeight + 126 + 20 + 'px'
+                    } else {
+                        control.style.top = ''
+                    }
                 });
             });
         }

@@ -11,6 +11,8 @@
 </head>
 <body>
 
+    <button class="phone"></button>
+
     <header class="header section">
         <div class="container header__container">
             <div class="row-center">
@@ -21,11 +23,11 @@
                 </picture>
 
                 <nav class="header__nav row">
-                    <a href="#" class="header__link">Услуги</a>
-                    <a href="#" class="header__link">Этапы работы</a>
-                    <a href="#" class="header__link">Преимущества</a>
-                    <a href="#" class="header__link">Результаты клиентов</a>
-                    <a href="#" class="header__link">Контакты</a>
+                    <a href="#industries" class="header__link">Услуги</a>
+                    <a href="#consult" class="header__link">Этапы работы</a>
+                    <a href="#power" class="header__link">Преимущества</a>
+                    <a href="#slider" class="header__link">Результаты клиентов</a>
+                    <a href="#send" class="header__link">Контакты</a>
                 </nav>
 
                 <button class="button header__button">Бесплатная консультация</button>
@@ -41,17 +43,17 @@
 
         <div class="header__menu">
             <nav class="header__nav header__nav--menu">
-                <a href="#" class="header__link">Услуги</a>
-                <a href="#" class="header__link">Этапы работы</a>
-                <a href="#" class="header__link">Преимущества</a>
-                <a href="#" class="header__link">Результаты клиентов</a>
-                <a href="#" class="header__link">Контакты</a>
+                <a href="#industries" class="header__link">Услуги</a>
+                <a href="#consult" class="header__link">Этапы работы</a>
+                <a href="#power" class="header__link">Преимущества</a>
+                <a href="#slider" class="header__link">Результаты клиентов</a>
+                <a href="#send" class="header__link">Контакты</a>
             </nav>
             <button class="button header__button header__button--menu">Бесплатная консультация</button>
         </div>
 
     </header>
-
+    <section class="header__fake"></section>
     <main>
 
         <section class="section main">
@@ -91,7 +93,7 @@
 
         </section>
 
-        <section class="section steps">
+        <section id="steps" class="section steps">
 
             <picture class="steps__img">
                 <source media="(max-width: 991px)" srcset="img/steps/img.png">
@@ -128,7 +130,7 @@
             </div>
         </section>
 
-        <section class="section industries">
+        <section id="industries" class="section industries">
             <div class="container industries__container">
                 <h3 class="section__title industries__title">Оказываем <span>юридическую поддержку</span> по следующим отраслям права:</h3>
                 <img class="industries__img" src="img/industries/imgM.png" alt="image">
@@ -219,7 +221,7 @@
             </div>
         </section>
 
-        <section class="section consult">
+        <section id="consult" class="section consult">
             <picture class="consult__bg">
                 <source media="(max-width: 991px)" srcset="img/consult/bgM.png">
                 <img src="img/consult/bg.png" alt="bg">
@@ -287,7 +289,7 @@
         </section>
         <!-- /.section consult -->
 
-        <section class="section power">
+        <section id="power" class="section power">
 
             <div class="container power__container">
                 <h3 class="section__title power__title">Беремся за дела <span>любой сложности,</span> в том числе <span>прецедентные</span></h3>
@@ -333,7 +335,7 @@
         </section>
         <!-- /.section power -->
 
-        <section class="section send">
+        <section id="send" class="section send">
             <div class="container send__container">
 
                 <div class="row send__row">
@@ -394,7 +396,7 @@
             </div>
             <!-- /.section faq -->
 
-            <div class="slider">
+            <div id="slider" class="slider">
 
                 <div class="section__title slider__title">Посмотрите, как мы помогли решить <span>юридические вопросы</span></div>
 
@@ -519,11 +521,11 @@
                 </picture>
 
                 <nav class="footer__nav">
-                    <a href="#" class="footer__link">Услуги</a>
-                    <a href="#" class="footer__link">Этапы работы</a>
-                    <a href="#" class="footer__link">Преимущества</a>
-                    <a href="#" class="footer__link">Результаты клиентов</a>
-                    <a href="#" class="footer__link">Контакты</a>
+                    <a href="#industries" class="footer__link">Услуги</a>
+                    <a href="#consult" class="footer__link">Этапы работы</a>
+                    <a href="#power" class="footer__link">Преимущества</a>
+                    <a href="#slider" class="footer__link">Результаты клиентов</a>
+                    <a href="#send" class="footer__link">Контакты</a>
                 </nav>
 
                 <button class="button footer__button">Бесплатная консультация</button>
@@ -549,7 +551,7 @@
         </div>
     </div>
 
-    <div class="modal modal-thanks">
+    <div style="display: none;" class="modal modal-thanks">
         <div class="modal__container">
             <div class="modal-thanks__dialog">
                 <img src="img/close.png" alt="close" class="modal__close">

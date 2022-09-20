@@ -6,6 +6,16 @@
     backdrop-filter: blur(15px)
     position: relative
     z-index: 2
+    &--fix
+        position: fixed
+        width: 100%
+        left: 50%
+        transform: translateX(-50%)
+        top: 0
+        z-index: 198
+        animation: inTop 0.5s
+    &__fake
+        height: 0
     &__menu
         display: none
         position: absolute
